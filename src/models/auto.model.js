@@ -13,18 +13,23 @@ const autoSchema = new mongoose.Schema({
         type: Number,
         required: true 
     },
-    color:{
-        type:String,
-        required:true
+    color: {
+        type: String,
+        required: true
     },
-    placa:{
-        type:String,
-        required:true
+    placa: {
+        type: String,
+        required: true
+    },
+    precio: {
+        type: Number,
+        required: true,
+        min: [0, "El precio no puede ser negativo"],
     },
     disponibilidad: {
-        type: String, 
+        type: String,
         enum: ["Disponible", "Ocupado"],
-        required: true
+        default: "Disponible"
     }
 }, {
     timestamps: true

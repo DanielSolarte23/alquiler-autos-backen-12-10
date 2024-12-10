@@ -10,13 +10,14 @@ export const getAutos = async (req, res) => {
 }
 export const agregarAuto = async (req, res) => {
     try {
-        const { marca, modelo, año, color, placa, disponibilidad } = req.body;
+        const { marca, modelo, año, color, placa,precio, disponibilidad } = req.body;
         const newAuto = new Auto({
             marca,
             modelo,
             año,
             color,
             placa,
+            precio,
             disponibilidad,
         })
         const saveAuto = await newAuto.save()
