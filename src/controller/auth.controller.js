@@ -81,9 +81,6 @@ export const profile = async (req, res) => {
     createdAt: userFound.createdAt,
     updatedAt: userFound.updatedAt,
   })
-
-  // console.log(req.user);
-  // res.json('profile')
 }
 
 export const verifyToken = async (req, res) => {
